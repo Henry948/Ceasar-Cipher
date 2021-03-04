@@ -17,7 +17,16 @@ namespace CaesarCipher
       for (int i = 0; i < secretMessage.Length; i++) {
           char letter = secretMessage[i];
 
+          int index = Array.IndexOf(alphabet, 'i');
+          int newIndex = index + 3;
+
+          char encryptedChar = alphabet[newIndex];
+
+          msgArray[i] = encryptedChar;
       }
+
+      String.Join(msgArray);
+      Console.WriteLine(msgArray);
     }
   }
 }
