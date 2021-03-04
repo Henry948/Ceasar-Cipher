@@ -18,7 +18,7 @@ namespace CaesarCipher
         char letter = secretMessage[i];
 
         int letterPos = Array.IndexOf(alphabet, letter);
-        int newLetterPos = letterPos + 3;
+        int newLetterPos = (letterPos + 3) % alphabet.Length;
 
         char encryptedChar = alphabet[newLetterPos];
 
