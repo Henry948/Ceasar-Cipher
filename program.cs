@@ -13,6 +13,11 @@ namespace CaesarCipher
       char[] msgArray = secretMessage.ToCharArray();
 
       char[] encryptedMessage = new char[](secretMessage.Length);
+
+      for (int i = 0; i < secretMessage.Length; i++) {
+          char letter = secretMessage[i];
+
+      }
     }
   }
 }
