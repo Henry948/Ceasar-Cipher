@@ -15,18 +15,18 @@ namespace CaesarCipher
       char[] encryptedMessage = new char[secretMessage.Length];
 
       for (int i = 0; i < secretMessage.Length; i++) {
-          char letter = secretMessage[i];
+        char letter = secretMessage[i];
 
-          int index = Array.IndexOf(alphabet, 'i');
-          int newIndex = index + 3;
+        int letterPos = Array.IndexOf(alphabet, letter);
+        int newLetterPos = letterPos + 3;
 
-          char encryptedChar = alphabet[newIndex];
+        char encryptedChar = alphabet[newLetterPos];
 
-          msgArray[i] = encryptedChar;
+        msgArray[i] = encryptedChar;
       }
 
-      String.Join(msgArray);
-      Console.WriteLine(msgArray);
+      string encodedString = String.Join("", msgArray);
+      Console.WriteLine(encodedString);
     }
   }
 }
